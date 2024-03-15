@@ -3,6 +3,7 @@ package com.hackathon.hackathon.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,7 +48,9 @@ public class HackathonService {
     }
 
     public List<Item> getItemsByType(String type) {
-    	return null;
+    	return items.stream()
+                .filter(item -> item.getType().equalsIgnoreCase(type))
+                .toList();
     }
 
     public void addItem(Item item) {
@@ -55,7 +58,26 @@ public class HackathonService {
     }
 
 	public String makeOffer(String itemName, double amount, Bidder bidder) {
-    	return null;
+
+        Optional<Item> item = items.stream()
+                .filter(itemInList -> itemInList.getName().equalsIgnoreCase(itemName))
+                .findAny();
+
+    	if(item.isEmpty()) {
+            return ITEM_NOT_FOUND;
+        }
+
+        Item foundItem = item.get();
+
+        if(amount > foundItem.getHighestOffer()) {
+            foundItem.setHighestOffer(amount);
+            item.get().setCurrentBidder(bidder);
+            return OFFER_ACCEPTED;
+        }
+
+        return OFFER_REJECTED;
+
+
 	}
 
 	public Map<String, String> getWinningBidder() {

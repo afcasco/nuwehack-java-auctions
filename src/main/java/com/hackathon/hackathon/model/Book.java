@@ -1,6 +1,14 @@
 package com.hackathon.hackathon.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@AllArgsConstructor
+@Setter
+@Getter
 public class Book extends Item {
+    // Getters y Setters
     private String author;
     private int yearPublished;
 
@@ -10,20 +18,4 @@ public class Book extends Item {
         this.yearPublished = yearPublished;
     }
 
-    // Getters y Setters
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public int getYearPublished() {
-        return yearPublished;
-    }
-
-    public void setYearPublished(int yearPublished) {
-        this.yearPublished = yearPublished;
-    }
 }
