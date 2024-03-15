@@ -24,4 +24,5 @@ public class Item {
         this.currentBidder = currentBidder;
         this.type = type;
     }
+
 }

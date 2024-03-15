@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hackathon.hackathon.model.Bidder;
 import com.hackathon.hackathon.model.Item;
+
+import static java.util.stream.Collectors.*;
 
 
 /**
@@ -36,7 +40,7 @@ public class HackathonService {
 	private static String OFFER_ACCEPTED = "Offer accepted";
 	private static String OFFER_REJECTED = "Offer rejected";
 
-    private List<Item> items;
+    private final List<Item> items;
 
     @Autowired
     public HackathonService(List<Item> items) {
@@ -81,6 +85,8 @@ public class HackathonService {
 	}
 
 	public Map<String, String> getWinningBidder() {
-    	return null;
+    	return items.stream()
+                .filter(item -> item.getCurrentBidder() != null)
+                .collect(toMap(Item::getName, item -> item.getCurrentBidder().getName()));
     }
 }
