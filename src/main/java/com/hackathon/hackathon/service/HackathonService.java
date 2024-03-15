@@ -59,8 +59,6 @@ public class HackathonService {
         }
 
         return OFFER_REJECTED;
-
-
 	}
 
 	public Map<String, String> getWinningBidder() {
