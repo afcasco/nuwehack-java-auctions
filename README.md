@@ -21,18 +21,21 @@ The average difficulty is: easy.
     - Complete the body of the getWinningBidders() method. This method must return a Map of the Items that have been bid on (that there is a Bidder) and whose value is the name of the Bidder that has bid.
 
 
-      Turns items list into a stream, discards all the items without a non-null bidder
-      and collects the result into a map with the key being the item name, and the value
-      the current bidder name.
-
+```     
+      Turns items list into a stream, discards all the items without a non-null bidder and collects the result into a map 
+      with the key being the item name, and the value the current bidder name.
+   ```
 2. Implementation of the "**Art**" class:
     - Include the Art class as a child of the Item class.
     - Include the implementation of the constructor.
     - Include the getter and setter methods.
 
-      
+      ```   
       Add "extends Item" to the Art class
       Add lombok and use it to generate the constructor, setters, and getters.
+      ```
+
+
 3. Implementation of the "**makeOffer**" method:
     - The body of the makeOffer() method must be completed, which upon receiving the name of the item(itemName), the bid amount(amount), and the bidder making the bid(bidder).
     - It must check if the item specified by itemName exists in the list of items:
@@ -41,7 +44,7 @@ The average difficulty is: easy.
         - If the bid is higher than the highest bid, it updates the highest bid and the current bidder for the item and returns the constant OFFER_ACCEPTED.
         - If the bid is equal to or lower than the highest bid, it returns the constant OFFER_REJECTED.  
 
-      
+      ```
       Early returns to avoid checking unnecessary cases.
 
       Added "final" to all the constant fields.
@@ -52,13 +55,17 @@ The average difficulty is: easy.
       If the bidding amount is lower than the new bidd returns the constant OFFER_ACCEPTED
 
       Otherwise returns OFFER_REJECTED
+      ```
 4. Implementation of the "**getItemsByType**" method in the **HackathonService** class:
     - The body of the getItemsByType() method that receives the type parameter of type String must be completed.
     - This method must return a list of all the items available in the auction filtered by the type it receives.
 
-
+```
+      
       Gets a stream from the items list, and filters the items by type using a lambda, collect the results into a list
       and returns them.
+```
+      
 
 Remember that the list of items is already injected into the service from the MockDataConfig.java file.
 
