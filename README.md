@@ -21,10 +21,10 @@ The average difficulty is: easy.
     - Complete the body of the getWinningBidders() method. This method must return a Map of the Items that have been bid on (that there is a Bidder) and whose value is the name of the Bidder that has bid.
 
 
-```     
+      ```     
       Turns items list into a stream, discards all the items without a non-null bidder and collects the result into a map 
       with the key being the item name, and the value the current bidder name.
-   ```
+      ```
 2. Implementation of the "**Art**" class:
     - Include the Art class as a child of the Item class.
     - Include the implementation of the constructor.
@@ -56,15 +56,14 @@ The average difficulty is: easy.
 
       Otherwise returns OFFER_REJECTED
       ```
-4. Implementation of the "**getItemsByType**" method in the **HackathonService** class:
-    - The body of the getItemsByType() method that receives the type parameter of type String must be completed.
-    - This method must return a list of all the items available in the auction filtered by the type it receives.
+   4. Implementation of the "**getItemsByType**" method in the **HackathonService** class:
+       - The body of the getItemsByType() method that receives the type parameter of type String must be completed.
+       - This method must return a list of all the items available in the auction filtered by the type it receives.
 
-```
-      
+      ```
       Gets a stream from the items list, and filters the items by type using a lambda, collect the results into a list
       and returns them.
-```
+      ```
       
 
 Remember that the list of items is already injected into the service from the MockDataConfig.java file.
