@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Art extends Item{
+public class Art extends Item {
 
     private String name;
     private double initialPrice;
@@ -21,9 +21,4 @@ public class Art extends Item{
     private String type;
     private String artist;
     private int yearCreated;
-
-
-    public Art(String name, double initialPrice, double highestOffer, Bidder currentBidder, String type) {
-        super(name, initialPrice, highestOffer, currentBidder, type);
-    }
 }

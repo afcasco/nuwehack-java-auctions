@@ -11,5 +11,4 @@ public class Offer {
     private String itemName;
     private double amount;
     private Bidder bidder;
-
 }
