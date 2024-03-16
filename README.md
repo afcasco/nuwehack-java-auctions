@@ -22,9 +22,12 @@ The average difficulty is: easy.
 
 
       ```     
-      Turns items list into a stream, discards all the items without a non-null bidder and collects the result
-      into a map with the key being the item name, and the value the current bidder name.
+      Turns items list into a stream, discards all the items without a non-null bidder
+      and collects the result into a map with the key being the item name, and the 
+      value the current bidder name.
       ```
+
+
 2. Implementation of the "**Art**" class:
     - Include the Art class as a child of the Item class.
     - Include the implementation of the constructor.
@@ -44,6 +47,7 @@ The average difficulty is: easy.
         - If the bid is higher than the highest bid, it updates the highest bid and the current bidder for the item and returns the constant OFFER_ACCEPTED.
         - If the bid is equal to or lower than the highest bid, it returns the constant OFFER_REJECTED.  
 
+
       ```
       Early returns to avoid checking unnecessary cases.
 
@@ -59,6 +63,7 @@ The average difficulty is: easy.
    4. Implementation of the "**getItemsByType**" method in the **HackathonService** class:
        - The body of the getItemsByType() method that receives the type parameter of type String must be completed.
        - This method must return a list of all the items available in the auction filtered by the type it receives.
+
 
       ```
       Gets a stream from the items list, and filters the items by type using a lambda,
