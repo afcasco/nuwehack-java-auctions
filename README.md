@@ -22,8 +22,8 @@ The average difficulty is: easy.
 
 
       ```     
-      Turns items list into a stream, discards all the items without a non-null bidder and collects the result into a map 
-      with the key being the item name, and the value the current bidder name.
+      Turns items list into a stream, discards all the items without a non-null bidder and collects the result
+      into a map with the key being the item name, and the value the current bidder name.
       ```
 2. Implementation of the "**Art**" class:
     - Include the Art class as a child of the Item class.
@@ -61,8 +61,8 @@ The average difficulty is: easy.
        - This method must return a list of all the items available in the auction filtered by the type it receives.
 
       ```
-      Gets a stream from the items list, and filters the items by type using a lambda, collect the results into a list
-      and returns them.
+      Gets a stream from the items list, and filters the items by type using a lambda,
+      collect the results into a list and returns them.
       ```
       
 
