@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Book extends Item {
-    // Getters y Setters
+
     private String author;
     private int yearPublished;
 
