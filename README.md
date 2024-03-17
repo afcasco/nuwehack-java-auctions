@@ -48,6 +48,7 @@ The average difficulty is: easy.
         - If the bid is equal to or lower than the highest bid, it returns the constant OFFER_REJECTED.  
 
 
+
       ```
       Early returns to avoid checking unnecessary cases.
 
@@ -60,11 +61,10 @@ The average difficulty is: easy.
 
       Otherwise returns OFFER_REJECTED
       ```
+
    4. Implementation of the "**getItemsByType**" method in the **HackathonService** class:
        - The body of the getItemsByType() method that receives the type parameter of type String must be completed.
        - This method must return a list of all the items available in the auction filtered by the type it receives.
-
-
       ```
       Gets a stream from the items list, and filters the items by type using a lambda,
       collect the results into a list and returns them.
