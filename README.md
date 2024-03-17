@@ -22,7 +22,7 @@ The average difficulty is: easy.
 
 
       ```     
-      Turns items list into a stream, discards all the items without a null bidder
+      Turns items list into a stream, discards all the items with a null bidder
       and collects the result into a map with the key being the item name, and the 
       value the current bidder name.
       ```
